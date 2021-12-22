@@ -11,6 +11,12 @@ html {
   font-size: 18px;
 }
 
+@mixin displayFlex($direction, $just-content, $al-items) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $just-content;
+  align-items: $al-items;
+}
 // Colors
 $darkCyan: hsl(185, 75%, 39%);
 $veryDarkSaturatedBlue: hsl(229, 23%, 23%);

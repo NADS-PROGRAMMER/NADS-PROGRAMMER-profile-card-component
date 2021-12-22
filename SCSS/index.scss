@@ -1,0 +1,136 @@
+@import "./general";
+
+body {
+  overflow: hidden;
+}
+
+body {
+  @include displayFlex(column, center, center);
+  background: $darkCyan;
+  overflow: hidden;
+  height: 100vh;
+  padding: 1.5rem;
+}
+
+.card {
+  box-shadow: 0px 0px 10px 10px $darkCyan;
+  position: relative;
+  border-radius: 15px;
+  width: 100%;
+
+  figure {
+    img {
+      border-radius: 15px 15px 0px 0px;
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .card--body {
+    @include displayFlex(column, center, center);
+    background: white;
+
+    .img--victor {
+      position: absolute;
+      border-radius: 50%;
+      border: 5px solid white;
+    }
+  }
+
+  .card--body-2 {
+    @include displayFlex(column, none, center);
+    background: white;
+    border-bottom: 1px solid rgb(228, 224, 224);
+    padding: 4rem 0 1.5rem 0;
+    gap: 5px;
+
+    h4 {
+      @include displayFlex(row, none, none);
+      gap: 0.5rem;
+
+      .user--name {
+        color: $veryDarkSaturatedBlue;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+
+      .user--age {
+        font-size: 1rem;
+        color: $darkGray;
+        font-weight: 400;
+      }
+    }
+
+    .user--country {
+      font-size: 0.8rem;
+      color: $darkGrayishBlue;
+    }
+  }
+
+  // Card stats
+  .card--body-footer {
+    @include displayFlex(row, space-evenly, center);
+    border-radius: 0px 0px 15px 15px;
+    background: white;
+    padding: 1.5rem 0rem;
+
+    .footer--item {
+      @include displayFlex(column, center, center);
+
+      .number {
+        color: $veryDarkSaturatedBlue;
+        font-weight: 700;
+      }
+
+      .category {
+        font-weight: 700;
+        font-size: 0.6rem;
+        color: $darkGray;
+      }
+    }
+  }
+}
+
+// Two circles (top and bottom) styles
+.img--top {
+  position: fixed;
+  display: block;
+  width: 130%;
+  left: -70%;
+  top: -40%;
+  transform: rotate(-5deg);
+}
+
+.img--bottom {
+  position: fixed;
+  display: block;
+  width: 130%;
+  bottom: -30%;
+  left: 50%;
+  transform: rotate(20deg);
+}
+
+@media only screen and (min-width: 540px) {
+  .img--top {
+    transform: rotate(360deg);
+    width: 60em;
+    left: -25%;
+    top: -80%;
+  }
+
+  .img--bottom {
+    transform: rotate(-360deg);
+    width: 60em;
+    left: 45%;
+    bottom: -95%;
+  }
+
+  .card {
+    max-width: 364px;
+
+    .card--body-2 {
+      gap: 0.5rem;
+    }
+  }
+}
