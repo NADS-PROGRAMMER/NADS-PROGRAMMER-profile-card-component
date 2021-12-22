@@ -108,17 +108,16 @@ body {
       -ms-flex-align: none;
           align-items: none;
   gap: 0.5rem;
+  font-size: 1rem;
 }
 
 .card .card--body-2 h4 .user--name {
   color: #2d3248;
   font-weight: 700;
-  font-size: 1rem;
 }
 
 .card .card--body-2 h4 .user--age {
-  font-size: 1rem;
-  color: #969696;
+  color: #6a6f81;
   font-weight: 400;
 }
 

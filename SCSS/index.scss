@@ -48,16 +48,15 @@ body {
     h4 {
       @include displayFlex(row, none, none);
       gap: 0.5rem;
+      font-size: 1rem;
 
       .user--name {
         color: $veryDarkSaturatedBlue;
         font-weight: 700;
-        font-size: 1rem;
       }
 
       .user--age {
-        font-size: 1rem;
-        color: $darkGray;
+        color: $darkGrayishBlue;
         font-weight: 400;
       }
     }
